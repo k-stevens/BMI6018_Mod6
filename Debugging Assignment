@@ -101,10 +101,14 @@ def correction_add_function(arg1,arg2):
         #print(arg_2_sum)
 
       
-        arg1[arg1_index]=arg1[arg1_index]+str(arg_2_sum)
+        arg1[0]=arg1[0]+str(arg_2_sum)
         arg1_index+=1
-        print(arg1)
-        #return arg1
+        arg1[1]=arg1[1]+str(arg_2_sum)
+        arg1_index+=1
+        arg1[2]=arg1[2]+str(arg_2_sum)
+        arg1_index+=1
+        #print(arg1)
+        return arg1
     
 
 arg1=[1,2,3]
