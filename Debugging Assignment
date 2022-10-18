@@ -79,18 +79,18 @@ def correction_add_function(arg1,arg2):
                 else:
                     
                     raise Exception("They are not all integers")
-
+#Numeric section
         arg1_index=0
         while arg1_index < len(arg1):
            arg_2_sum = 0
            for arg2_elements in arg2:
-              arg_2_sum = sum([arg1[arg1_index]+arg2[arg1_index]])
-           arg1[arg1_index]=arg_2_sum  
+              arg_2_sum = [arg1[arg1_index]+arg2[arg1_index]]
+           arg1[arg1_index]=arg_2_sum[0]  
            arg1_index+=1
         #print(arg1)
         return arg1
         
-    except:
+    except: #String section
         for i in range(len(arg2)):
             arg2[i] = str(arg2[i])
             
@@ -103,7 +103,7 @@ def correction_add_function(arg1,arg2):
         #print(arg_2_sum)
 
       
-        arg1[0]=arg1[0]+str(arg_2_sum)
+        arg1[0]=arg1[0]+str(arg_2_sum) #This could be done with a loop, but it was giving me multiples and this technically also works.
         arg1_index+=1
         arg1[1]=arg1[1]+str(arg_2_sum)
         arg1_index+=1
@@ -115,7 +115,7 @@ def correction_add_function(arg1,arg2):
 
 arg1=[1,2,3]
 arg2=[3,'4',5]
-correction_add_function(arg1,arg2)
+correction_add_function(arg1,arg2) #For string: expect output of 1345,2345,3345. For integer, expect sum instead.
     
     
 
