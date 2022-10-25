@@ -1,0 +1,61 @@
+#Syntax errors are errors in the actual writing of the code itself. This includes not having a character that's needed, using the wrong character, not closing your #parentheses, among others.  Typically with syntax errors, it will show where the error is with a ^.
+
+#Ex:
+
+print("Hello World"       #Not closing the parentheses
+
+#Ex:
+
+x=2
+
+y=4
+
+if x==y        #Colon is needed after y
+
+    print("true")
+
+if x = y:     #Need to use ==, not =
+
+     print("true")
+     
+     
+#Exception errors are errors that were technically coded right, but occur when trying to run the code, meaning something went wrong when trying to execute. These include #ZeroDivisionErrors, NameErrors, and TypeErrors.
+
+#Ex
+
+print("I will help you divide 2 numbers!")
+
+num1=input("What is your first number?")
+
+num2=input("What is your second number?")
+
+ans=float(num1)/(float(num2))
+
+print("The answer is " + str(ans))
+
+#inputs: 1, 0    
+#this is going to give a ZeroDivisionError message because you can't divide by 0. The code ran fine, it just couldn't finish due to the inputs
+
+#Ex:
+
+variable1= 2
+
+print(varable1)
+
+#User-defined exceptions are what they sound like: the user/programmer can define/create their own exceptions for the program they created. They do this by creating a #new exception class. You program exceptions into your program so it still runs/doesn't break even if there is an error. For example, you can write a try, except block #that catches the issue and returns an error message. These can be defined for an error to include, KeyboardInterupts, ValueErrors or RangeErrors. 
+
+#Ex:
+try:
+    wgt= -10
+    print("Your weight is:")
+    print(wgt)
+    if wgt<0:
+        raise NegativeError
+    wgt_in_kg= .453*wgt
+    print("Your weight in kilograms is:")
+    print(wgt_in_kg)
+except ValueError:
+    print("Please try again with the correct weight.")
+    
+ #Output: -10. Please try again with the correct weight.
+ #Instead of getting an error message using a negative number, you define it as a ValueError and send out an error message.
