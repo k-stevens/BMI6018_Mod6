@@ -50,12 +50,14 @@ try:
     print("Your weight is:")
     print(wgt)
     if wgt<0:
-        raise NegativeError
+            raise ValueError
     wgt_in_kg= .453*wgt
     print("Your weight in kilograms is:")
     print(wgt_in_kg)
-except ValueError:
-    print("Please try again with the correct weight.")
     
+except ValueError:
+        print("Please try again with the correct weight.")
+        
+        
  #Output: -10. Please try again with the correct weight.
  #Instead of getting an error message using a negative number, you define it as a ValueError and send out an error message.
